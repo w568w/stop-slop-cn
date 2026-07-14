@@ -1,7 +1,7 @@
 ---
 name: stop-slop
 description: 当用户要求「说人话」「不要 slop」时应用本 Skill。
-license: LicenseRef-AllRightsReserved
+license: apache-2.0
 ---
 
 # When to use
