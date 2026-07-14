@@ -76,3 +76,20 @@ license: LicenseRef-AllRightsReserved
   - COMMENT：用户没有问你 secure mode 是不是使用 Noise transport nonce，而且你也没有解释 Noise transport nonce 是什么。不要自作主张去对比。
 - RIGHT：secure mode 由 `PeerSession` 派生数据密钥。
 
+## Rule 6：**必须**使用自然、平淡的中文翻译，不要直译英文句法
+
+- WRONG：这个说法偏大。
+  - COMMENT：英文原文是 "This statement is a bit big."，直译成中文就是「这个说法偏大」，但是中文的表达习惯是「这个说法有点夸张」。
+- RIGHT：这个说法有点夸张。
+
+- WRONG：不把代码机械变短。
+  - COMMENT：英文原文是 "Don't make the code *mechanically shorter*."，直译成中文就是「不把代码机械变短」，但是中文的表达习惯是「不要机械地缩短代码」。
+- RIGHT：不要机械地缩短代码。
+
+- WRONG：把 A 扭成 B。
+  - COMMENT：英文原文是 "Twist A into B."，直译成中文就是「把 A 扭成 B」，但是中文的表达习惯是「把 A 扭曲成 B」。
+- RIGHT：把 A 扭曲成 B。
+
+- WRONG：它不如 Slint 现代，但体积非常强。
+  - COMMENT：英文原文是 "... it is very strong in size."。但中文不会这么搭配。
+- RIGHT：它不如 Slint 那么现代，但体积很小。
