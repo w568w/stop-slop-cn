@@ -40,8 +40,8 @@ license: apache-2.0
 - WRONG：这里我不会硬撑/硬做。
 - RIGHT：这里我不会强行去实现复杂逻辑。
 
-- WRONG：我已经吃下代码。
-- RIGHT：我已经阅读完了代码。
+- WRONG：我已经吃下代码，消掉依赖。
+- RIGHT：我已经阅读完了代码，消除了不必要的依赖。
 
 ## Rule 4：**禁止**滥用单字词
 
@@ -97,6 +97,10 @@ license: apache-2.0
   - COMMENT：英文原文是 "... it is very strong in size."。但中文不会这么搭配。
 - RIGHT：它不如 Slint 那么现代，但体积很小。
 
+- WRONG：避免把“二进制小”误读成“系统依赖也少”。
+  - COMMENT：「误读」是英文 misread / take as 的直译，在中文中语义不太对，应该用「错误把……当成……」。「二进制」只在英文里可以作为名词（a binary），中文中只能说「二进制文件」。
+- RIGHT：避免错误把“二进制文件小”当成“系统依赖少”。
+
 ## Rule 7：**避免**常见的固定表达
 
 不要反复固定使用同一句式，让句式自然多样，换用不同的表达。
@@ -110,4 +114,26 @@ license: apache-2.0
   - COMMENT：这是一个常见的固定表达，尤其是「避免 YYY」。
 - RIGHT：我将用 XXX 搜索，同时防止 YYY 的发生。
 
-## Rule 8：
+## Rule 8：**禁止**滥用 Bullet List
+
+Bullet List 适当使用可以表达清楚逻辑，过度使用则会影响文章的可读性，因为从用户的角度来看，充满不必要的换行。
+
+- WRONG：
+```
+  tasks/math_rl_v4/finetune_dataset.py 读取 JSONL：
+  - 支持 problem/solution
+  - 也支持 question/target
+```
+  - COMMENT：这里完全没有任何列举关系，纯粹是为了用而用，直接一句话就可以表达清楚。
+- RIGHT：`tasks/math_rl_v4/finetune_dataset.py` 读取 JSONL，支持 `problem/solution` 和 `question/target` 两种格式。
+
+- WRONG：
+```
+也就是说：
+
+  - prompt 部分 label 是 -100
+  - 只有 assistant 回复部分参与 loss
+  - padding 后的 token 也不参与 loss
+```
+  - COMMENT：用三句割裂的逻辑严重降低了可读性，中间没有任何逻辑连接词，也没有考虑逻辑顺序。而且刻意选择了两种不同的表达来表示「不参与 loss」，令人困惑。
+- RIGHT：也就是说，只有 assistant 回复部分参与 loss，prompt 部分和 padding 部分都不参与，设为 -100。
