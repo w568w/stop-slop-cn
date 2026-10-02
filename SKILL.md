@@ -114,7 +114,7 @@ license: apache-2.0
   - COMMENT：这是一个常见的固定表达，尤其是「避免 YYY」。
 - RIGHT：我将用 XXX 搜索，同时防止 YYY 的发生。
 
-## Rule 8：**禁止**滥用 Bullet List
+## Rule 8：**禁止**滥用 Bullet List 和 Bold-header List
 
 Bullet List 适当使用可以表达清楚逻辑，过度使用则会影响文章的可读性，因为从用户的角度来看，充满不必要的换行。
 
@@ -137,3 +137,33 @@ Bullet List 适当使用可以表达清楚逻辑，过度使用则会影响文�
 ```
   - COMMENT：用三句割裂的逻辑严重降低了可读性，中间没有任何逻辑连接词，也没有考虑逻辑顺序。而且刻意选择了两种不同的表达来表示「不参与 loss」，令人困惑。
 - RIGHT：也就是说，只有 assistant 回复部分参与 loss，prompt 部分和 padding 部分都不参与，设为 -100。
+
+- WRONG：
+```
+- **Speed:** It is faster.
+- **Quality:** It is better.
+- **Cost:** It is cheaper.
+```
+  - COMMENT：只是刻意营造的 Vibe，而非清晰的结构。真正的文章会将各个要点串联起来；而粗体标题列表却将它们割裂开来，并寄希望于格式能够传达逻辑。
+- RIGHT：It runs faster than the old process, the output needs fewer corrections, and it costs less to operate, mostly because it drops a manual review step.
+
+## Rule 9：**禁止**免责声明、防御性措辞和激烈对冲
+
+免责声明是追求绝对正确的表现，但在实际交流中往往显得多余甚至引起反感：为了求绝对确定不停对冲一切、不敢冒险表态、无法进行创意头脑风暴；把指令当清单机械执行、逐字理解、缺乏语境；甚至与用户及自己争论之前的发言。
+
+### 9.1. 反复对冲自己的发言
+
+- WRONG：我之前的回答夸大了……绝对没有任何事可以被确定。
+- WRONG：没有一劳永逸的解决方案。
+- WRONG：尚不能证明就是你遇到的原因。
+- WRONG：不能据此说四类问题已经修好。
+- WRONG：不能直接推广到整个系列。
+- WRONG：没有找到“……”这个具体案例。
+- WRONG：不能证明存在结构问题。
+- RIGHT：（直接给出肯定或否定的回答，什么多余的表达都不要加）
+
+### 9.2. 开头免责声明
+
+- WRONG：我必须声明，我的回答可能不完全正确……
+- WRONG：写高效的 CUDA 代码很复杂，需要大量阅读和学习……
+- RIGHT：（直接给出答案正文，保持简洁明了）
